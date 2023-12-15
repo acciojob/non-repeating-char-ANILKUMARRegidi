@@ -2,11 +2,11 @@ function firstNonRepeatedChar(str) {
    let count = {};
 	for(let char of str)
 		{
-			count = (count[char]||0) + 1;
+			count[char] = (count[char]||0) + 1;
 		}
 	for(let char of str)
 		{
-			if (count(char) === 1)
+			if (count[char] === 1)
 			{
 				return char;
 			}
